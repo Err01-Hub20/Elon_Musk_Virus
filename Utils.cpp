@@ -28,7 +28,7 @@ void strReverseW(LPWSTR str) {
 		str[j] = c;
 	}
 
-	// Fix Newlines
+	
 	for (i = 0; i < len - 1; i++) {
 		if (str[i] == L'\n' && str[i + 1] == L'\r') {
 			str[i] = L'\r';
