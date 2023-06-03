@@ -1,3 +1,5 @@
+// 32 Bit architecture
+// Made by Frank
 extern "C"
 {
 	int _fltused;
