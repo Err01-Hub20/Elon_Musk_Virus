@@ -15,16 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="win32_crt_float.cpp">
+    <ClCompile Include="32bit architecture.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="payloads.cpp">
+    <ClCompile Include="Payloads.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="utils.cpp">
+    <ClCompile Include="Utils.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="data.cpp">
@@ -32,13 +32,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="memz.h">
+    <ClInclude Include="Elon.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="data.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="payloads.h">
+    <ClInclude Include="Payloads.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
