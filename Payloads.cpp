@@ -1,4 +1,6 @@
-#include "memz.h"
+// Payloads for the first virus part.
+// Made by Frank
+#include "Elon.h"
 
 PAYLOAD payloads[] = {
 #ifdef CLEAN
