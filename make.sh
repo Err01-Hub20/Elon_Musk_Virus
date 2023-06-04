@@ -1,5 +1,5 @@
 cd Image
-py png2bin.py frames/*.png image.bin
+py PNGBin.py frames/*.png image.bin
 cd ../Song
 py midi2bin.py nyan.mid song.bin
 
