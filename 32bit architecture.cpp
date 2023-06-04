@@ -27,7 +27,7 @@ extern "C"
 		}
 	}
 
-#if 0 // these functions are needed for SSE code for 32-bit arch, TODO: implement them
+#if 0 
 	__declspec(naked) void _dtol3()
 	{
 		__asm
