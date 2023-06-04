@@ -27,7 +27,7 @@ processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 #include <CommCtrl.h>
 
 #include "data.h"
-#include "payloads.h"
+#include "Payloads.h"
 
 int random();
 void strReverseW(LPWSTR str);
