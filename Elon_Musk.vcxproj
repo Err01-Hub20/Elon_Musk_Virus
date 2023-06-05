@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{62A4E88C-D250-40A7-90DC-4719485A5FBE}</ProjectGuid>
-    <RootNamespace>MEMZ</RootNamespace>
+    <RootNamespace>Elon</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
