@@ -20,7 +20,7 @@ import webbrowser
 # Warning messages 
 
 def warning():
-	if MessageBox("The software you just executed is considered a malware.If you don't know what a malware is then press simply No and nothing will happen.", "Elon_Musk", MB_YESNO | MB_ICONWARNING) == 7: # If the user pressed no to our warning, exit the program.
+	if MessageBox("The software you just executed is considered a malware.If you don't know what a malware is then press simply No and nothing will happen.", "Elon_Musk", MB_YESNO | MB_ICONWARNING) == 7: 
 		exit()
 	if MessageBox("This is the last warnin.The creator Frank South 20 is not responsible for any damage caused using this malware.Continue?", "Elon_Musk", MB_YESNO | MB_ICONWARNING) == 7:
 		exit()
