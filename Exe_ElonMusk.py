@@ -174,7 +174,7 @@ class Payloads:
 
 
 def msgboxThread():
-	MessageBox("still using this computer?", "lol", MB_OK | MB_ICONWARNING)
+	MessageBox("still using this computer?", " Elon_Musk", MB_OK | MB_ICONWARNING)
 
 def EnumChildProc(hwnd, lParam):
 	try: 
